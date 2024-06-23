@@ -45,6 +45,7 @@ function formatDuration(duration: duration.Duration) {
   let formattedDuration = "";
 
   const years = duration.years();
+  const months = duration.months();
   const days = duration.days();
   const hours = duration.hours();
   const minutes = duration.minutes();
@@ -52,6 +53,9 @@ function formatDuration(duration: duration.Duration) {
 
   if (years > 0) {
     formattedDuration += `${years} year${years > 1 ? "s" : ""}, `;
+  }
+  if (months > 0) {
+    formattedDuration += `${months} month${months > 1 ? "s" : ""}, `;
   }
   if (days > 0) {
     formattedDuration += `${days} day${days > 1 ? "s" : ""}, `;
